@@ -27,7 +27,8 @@ export default function HomeScreen({ navigation }) {
       const data = await res.json();
       setUsers(data);
     } catch (err) {
-      setError(err.message || 'Failed to fetch users.');
+      console.log('error =>', err.message);
+      setError('Failed to fetch users.');
     } finally {
       setLoading(false);
     }
